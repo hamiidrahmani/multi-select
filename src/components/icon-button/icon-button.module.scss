@@ -1,0 +1,13 @@
+.iconButton {
+  padding: 4px;
+  background-color: transparent;
+  display: inline-flex;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 250ms;
+
+  &:hover {
+    background-color: $bg-3;
+  }
+}

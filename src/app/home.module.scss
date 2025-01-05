@@ -1,0 +1,13 @@
+.container {
+  padding-right: 16px;
+  padding-left: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 32px;
+}
+
+.multiSelect {
+  max-width: 600px;
+  width: 100%;
+}

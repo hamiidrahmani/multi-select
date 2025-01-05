@@ -1,0 +1,9 @@
+.chip {
+  padding: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border-radius: 12px;
+  background-color: $bg-1;
+  border: $stroke;
+}
