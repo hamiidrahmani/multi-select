@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Multi-Select Dropdown Component
+
+This project is a multi-select dropdown component built with [Next.js](https://nextjs.org). The component allows users to add new items by typing into an input field and pressing Enter. The dropdown closes when clicking outside of it.
+
+## Features
+
+- **Add New Items**: Users can add new items to the dropdown list by typing into the input field and pressing Enter.
+- **Filter Items**: The input field filters the list of dropdown items as the user types.
+- **Auto-Select**: If the typed value is not already in the dropdown items, it will be added to the list and automatically selected. If it is already there, it will simply be selected.
+- **Close on Click Outside**: The dropdown closes when clicking outside of it.
+
+## Technologies
+
+- **Next.js**: A React framework for building server-side rendered and statically generated web applications.
+- **React.js**: A JavaScript library for building user interfaces.
+- **TypeScript**: The programming language used to build the component.
+- **SASS**: Styling for the component.
 
 ## Getting Started
 
-First, run the development server:
+First, install the dependencies:
+
+```bash
+npm install
+# or
+yarn install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To build:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+# or
+yarn build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+To start:
 
-## Learn More
+```bash
+npm run start
+# or
+yarn start
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Things to be done for the whole project
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. [ ] **Unit Testing**
+2. [ ] **E2E Test (cypress)**
+3. [ ] **Documentation**
+4. [ ] **Dockerizing**
+5. [ ] **Pre-commit and Pre-Push Hooks**
+6. [ ] **Accessibility**
+7. [ ] **Dark Mode**
+8. [ ] **Storybook**

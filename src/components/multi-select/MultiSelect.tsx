@@ -3,19 +3,10 @@ import { useDebounceFn } from "@/utils";
 import type { ChangeEvent, KeyboardEvent } from "react";
 import { useCallback, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
-import {
-  ChevronDownIcon,
-  ChevronUpIcon,
-  Chip,
-  ClickAwayListener,
-  CloseIcon,
-  IconButton,
-  Input,
-} from "../";
+import { ChevronDownIcon, ChevronUpIcon, Chip, ClickAwayListener, CloseIcon, IconButton, Input } from "../";
 import type { InputProps } from "../input";
 import type { ItemType } from "./List";
 import { List } from "./List";
-
 import styles from "./multi-select.module.scss";
 
 type MultiSelectProps = {
@@ -66,9 +57,7 @@ export function MultiSelect({
 
   const handleDebouncedAction = useCallback(
     (value: string) => {
-      const newOptions = options.filter((item) =>
-        item.label.toLowerCase().includes(value.toLowerCase())
-      );
+      const newOptions = options.filter((item) => item.label.toLowerCase().includes(value.toLowerCase()));
       setFilteredOptions(newOptions);
     },
     [options]
@@ -109,11 +98,7 @@ export function MultiSelect({
             }}
             options={filteredOptions}
             selectedOptions={valueProp}
-            emptyState={
-              <span className={styles.emptyState}>
-                No items found! Press enter to add.
-              </span>
-            }
+            emptyState={<span className={styles.emptyState}>No items found! Press enter to add.</span>}
           />
         )}
         <div className={styles.chipContainer}>
@@ -122,11 +107,7 @@ export function MultiSelect({
               key={id}
               label={label}
               endIcon={
-                <IconButton
-                  onClick={() =>
-                    onChange(valueProp.filter((item) => item.id !== id))
-                  }
-                >
+                <IconButton onClick={() => onChange(valueProp.filter((item) => item.id !== id))}>
                   <CloseIcon />
                 </IconButton>
               }
